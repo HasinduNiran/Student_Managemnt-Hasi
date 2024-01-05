@@ -26,18 +26,17 @@ export default function AllStudent() {
       <ul className="students-list">
         {students.map((student) => (
           <li key={student._id} className="student-item">
-            <strong>Name:</strong> {student.name} <br />
-            <strong>Age:</strong> {student.age} <br />
-            <strong>Gender:</strong> {student.gender} <br />
+            <strong>Name: {student.name} </strong> <br />
+            <strong>Age: {student.age}</strong> <br />
+            <strong>Gender:{student.gender} </strong><br />
 
-            {/* Use Link for navigation to the update page */}
-            <Link to={`/update/${student._id}`} className="nav-link">
+            <Link to={`/update/${student._id}`} className="nav-link nav-link-update">
               Update
             </Link>
-            {/* Use Link for navigation to the update page */}
-            <Link to={`/delete/${student._id}`} className="nav-link">
+            <Link to={`/delete/${student._id}`} className="nav-link nav-link-delete">
               Delete
             </Link>
+
 
           </li>
         ))}

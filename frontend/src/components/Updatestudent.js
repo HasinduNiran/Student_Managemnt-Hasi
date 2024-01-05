@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from "react-router-dom";
 
 const UpdateStudent = () => {
+  const navigate =useNavigate();
   const { id } = useParams();
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
@@ -40,7 +41,9 @@ const UpdateStudent = () => {
       
       await axios.put(`http://localhost:8071/student/update/${id}`, updatedData);
       console.log('Student updated successfully!');
+      navigate('/');
       alert("Student updated");
+   
     } catch (error) {
       console.error('Error updating student:', error.message);
     }
@@ -79,7 +82,8 @@ const UpdateStudent = () => {
                     onChange={(e) => setGender(e.target.value)}
                 />
             </div>
-            <button type="submit" className="btn btn-primary">Update</button>
+            <button type="submit" className="btn btn-primary">Update</button><br></br>
+           //
         </form>
     </div>
 );

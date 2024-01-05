@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./Addstudent.css";
 
 export default function AddStudent() {
 
@@ -22,7 +23,8 @@ export default function AddStudent() {
             gender
         }
        axios.post("http://localhost:8071/student/add",newStudent).then(()=>{
-        alert("student added")
+        alert("student added");
+        
        }).catch((err)=>{
             alert(err)
        })

@@ -14,7 +14,7 @@ body {
     border: 2px solid #ce0505;
     border-radius: 8px;
     box-shadow: 0 0 17px rgba(0, 0, 0, 6); /* Adjusted shadow */
-    background-color: rgba(255, 255, 255, .1); /* Slightly transparent white */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white */
   }
   
   h1 {
@@ -32,11 +32,11 @@ body {
     padding: 15px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
-    background-color: rgba(249, 249, 249, 0.2); /* Slightly transparent white */
+    background-color: rgba(238, 207, 207, 0.2); /* Slightly transparent white */
   }
   
   .student-item strong {
-    color: #333333;
+    color: #f3f3f3;
   }
   
   .update-button,
@@ -66,4 +66,28 @@ body {
   .delete-button:hover {
     background-color: #1e4974; /* Darker shade for hover effect */
   }
-  
+  /* AllStudent.css */
+/* AllStudent.css */
+
+.nav-link-update,
+.nav-link-delete {
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+ color: white; 
+  background-color: #990a0a; /* Black background color */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link-update:hover,
+.nav-link-delete:hover {
+  background-color: #333333; /* Darker shade for hover effect */
+  color: #ffffff; /* White color for text on hover */
+}
