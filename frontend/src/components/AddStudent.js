@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Addstudent.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 export default function AddStudent() {
-
+    const navigate =useNavigate();
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
@@ -24,6 +25,7 @@ export default function AddStudent() {
         }
        axios.post("http://localhost:8071/student/add",newStudent).then(()=>{
         alert("student added");
+        navigate('/');
         
        }).catch((err)=>{
             alert(err)
@@ -31,6 +33,7 @@ export default function AddStudent() {
     }
     return (
         <div className="container">
+            <h1>Add Student</h1>
             <form onSubmit={sendData}>
                 <div className="mb-3">
                     <label for="name" className="form-label">Student Name</label>
